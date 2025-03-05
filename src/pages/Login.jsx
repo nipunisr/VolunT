@@ -1,6 +1,8 @@
 // src/pages/Login.jsx
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
  const [formData, setFormData] = useState({
@@ -8,6 +10,8 @@ const Login = () => {
  password: ''
  });
 
+ 
+ const navigate = useNavigate(); 
  const handleChange = (e) => {
  const { name, value } = e.target;
  setFormData(prev => ({
@@ -24,7 +28,7 @@ const Login = () => {
 
  return (
  <div className="w-full ">
- <div className="text-center mb-8">
+ <div className="mb-8 text-center">
  <h1 className="text-4xl font-bold text-[#29142C] mb-2">
  Volunteer Login
  </h1>
@@ -34,7 +38,7 @@ const Login = () => {
  <div>
  <label 
  htmlFor="email" 
- className="block text-sm font-medium text-gray-700 mb-1"
+ className="block mb-1 text-sm font-medium text-gray-700"
  >
  E-Mail
  </label>
@@ -53,7 +57,7 @@ const Login = () => {
  <div>
  <label 
  htmlFor="password" 
- className="block text-sm font-medium text-gray-700 mb-1"
+ className="block mb-1 text-sm font-medium text-gray-700"
  >
  Password
  </label>
@@ -80,13 +84,14 @@ const Login = () => {
  <button
  type="submit"
  className="w-full bg-[#E17335] text-white py-1 px-4 rounded-md hover:bg-[#E17335] transition-colors duration-200 h-8"
+ onClick={() => navigate('/')}
  >
  Login
  </button>
 
  <div className="text-center">
  <Link 
- to="/register" 
+ to="/create-account" 
  className="text-sm text-gray-600 hover:text-[#E17335]"
  >
  Don't Have An Account
