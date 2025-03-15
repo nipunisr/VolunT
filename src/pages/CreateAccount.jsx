@@ -52,10 +52,11 @@ const CreateAccount = () => {
       // Handle successful form submission here
       console.log('Form submitted:', formData);
     }
+    navigate('/updated-creation');
   };
 
   const handleCancel = () => {
-    navigate('/'); // Adjust the route as needed
+    navigate('/login'); // Adjust the route as needed
   };
 
   return (

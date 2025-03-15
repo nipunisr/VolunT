@@ -57,7 +57,7 @@ const HomePage = () => {
               <div key={index} className="p-6 transition-shadow rounded-lg shadow-sm bg-purple-50 hover:shadow-md">
                 <h3 className="mb-3 text-xl font-semibold text-gray-800">{opportunity.title}</h3>
                 <p className="mb-4 text-gray-600">{opportunity.description}</p>
-                <Link to="/opportunities" className="flex justify-end font-medium text-[#E17335] hover:text-[#E17335]">
+                <Link to="/selected-opportunity" className="flex justify-end font-medium text-[#E17335] hover:text-[#E17335]">
                   More
                 </Link>
               </div>
